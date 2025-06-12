@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: TrackStockz # The name of your service, can be anything you want
+    env: node # Specify that this is a Node.js app
+    buildCommand: npm install # Install dependencies during the build
+    startCommand: npm run dev # Use 'npm run dev' to start the app with nodemon (if you are using it)
+    envVars:
+      - key: PORT
+        value: '8000' # Use the custom port you've provided
+      - key: MONGODB_URI
+        value: mongodb+srv://onlysainok24:Sainok24@cluster0.j7zko.mongodb.net # MongoDB URI
+      - key: CORS_ORIGIN
+        value: '*' # Allow all origins
+      - key: ACCESS_TOKEN_SECRET
+        value: '7T!UU/1F1?!0%GKM+=MET5IP@' # Your access token secret
+      - key: ACCESS_TOKEN_EXPIRY
+        value: '1d' # Access token expiry time
+      - key: REFRESH_TOKEN_SECRET
+        value: '9H2NR`^@KD!NHD%E1G@' # Your refresh token secret
+      - key: REFRESH_TOKEN_EXPIRY
+        value: '10d' # Refresh token expiry time
+      - key: CLOUDINARY_CLOUD_NAME
+        value: 'sainok' # Cloudinary cloud name
+      - key: CLOUDINARY_API_KEY
+        value: '852991981631586' # Cloudinary API key
+      - key: CLOUDINARY_API_SECRET_KEY
+        value: 'dueYen3zIs0hLZYYrDNXTaCqLds' # Cloudinary API secret key
+      - key: FRONTEND_URL
+        value: 'http://localhost:5173' # URL of your frontend
+      - key: EMAIL_USER
+        value: 'onlysainok24@gmail.com' # Your email user (for sending emails)
+      - key: APP_PASS
+        value: 'haqp nooh mxvg wvod' # Your app password for email authentication
+    healthCheckPath: / # Optional: A health check endpoint (e.g., /health)
