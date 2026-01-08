@@ -18,16 +18,43 @@ const compareTwoObjects = (obj1,obj2) => {
     return true;
 }
 
+// Environment configuration
+const isProduction = process.env.NODE_ENV === 'production';
 const FRONTEND_URL = process.env.FRONTEND_URL;
+
+// SMTP Configuration
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, 
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: parseInt(process.env.SMTP_PORT || '587'),
+  secure: process.env.SMTP_SECURE === 'true',
   auth: {
-    user: process.env.EMAIL_USER, 
-    pass: process.env.APP_PASS, 
+    user: process.env.SMTP_USER || process.env.EMAIL_USER,
+    pass: process.env.SMTP_PASS || process.env.APP_PASS,
   },
+  // Production settings
+  ...(isProduction && {
+    tls: {
+      rejectUnauthorized: true
+    },
+    pool: true,
+    maxConnections: 5,
+    maxMessages: 100
+  }),
+  // Development settings
+  ...(!isProduction && {
+    tls: {
+      rejectUnauthorized: false
+    }
+  })
+});
+
+// Test the transporter configuration
+transporter.verify(function(error, success) {
+  if (error) {
+    console.error('SMTP Connection Error:', error);
+  } else {
+    console.log(`SMTP Server is ready to send emails in ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'} mode`);
+  }
 });
 
 const generateAccessAndRefreshToken = async (userId) => {
@@ -574,34 +601,75 @@ const changeCurrentPassword = asyncHandler(async(req,res) => {
 
 
 const forgotPassword = asyncHandler(async(req,res) => {
-    const {email} = req.body;
-    if (!email) {throw new ApiError(404,"Email is Required")};
-    
-    const user = await User.findOne({email: email});
-    if (!user) {throw new ApiError(404,"User not found")};
-    // console.log(user);
+    try {
+        const {email} = req.body;
+        if (!email) {
+            throw new ApiError(400, "Email is Required");
+        };
+        
+        const user = await User.findOne({email: email});
+        if (!user) {
+            // For security reasons, don't reveal if the email exists or not
+            return res.status(200).json(
+                new ApiResponse(200, {}, "If your email is registered, you will receive a password reset link.")
+            );
+        };
 
-    const token = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
+        const token = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
 
-    const resetLink = `${FRONTEND_URL}/resetpassword/${token}`;
-    const response = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: 'Password Reset Request',
-      html: `<p>Click the link below to reset your password:</p>
-             <a href="${resetLink}">${resetLink}</a>
-             <p>This link is valid for 15 minutes.</p>`,
-    });
-    // console.log(response);
-    if (!response) {throw new ApiError(500,'Error sending email')};
+        if (!FRONTEND_URL) {
+            console.error('FRONTEND_URL is not defined in environment variables');
+            throw new ApiError(500, 'Server configuration error');
+        }
 
-    res.status(200)
-    .json(
-        new ApiResponse(
-            200,response,
-            "Password Reset Email Sent Successfully"
-        )
-    )
+        const resetLink = `${FRONTEND_URL}/resetpassword/${token}`;
+        
+        try {
+            const response = await transporter.sendMail({
+                from: `"TrackStockz" <${process.env.EMAIL_USER}>`,
+                to: email,
+                subject: 'Password Reset Request',
+                html: `
+                    <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                        <h2>Password Reset Request</h2>
+                        <p>You requested to reset your password. Click the button below to set a new password:</p>
+                        <div style="margin: 25px 0;">
+                            <a href="${resetLink}" 
+                               style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">
+                                Reset Password
+                            </a>
+                        </div>
+                        <p>Or copy and paste this link into your browser:</p>
+                        <p style="word-break: break-all;">${resetLink}</p>
+                        <p>This link will expire in 15 minutes for security reasons.</p>
+                        <hr>
+                        <p>If you didn't request this, please ignore this email and your password will remain unchanged.</p>
+                    </div>
+                `,
+            });
+
+            console.log('Password reset email sent:', response);
+
+            return res.status(200).json(
+                new ApiResponse(
+                    200, 
+                    {},
+                    "If your email is registered, you will receive a password reset link."
+                )
+            );
+        } catch (emailError) {
+            console.error('Error sending password reset email:', emailError);
+            throw new ApiError(500, 'Failed to send password reset email. Please try again later.');
+        }
+    } catch (error) {
+        console.error('Error in forgotPassword:', error);
+        // If it's already an ApiError, re-throw it
+        if (error instanceof ApiError) {
+            throw error;
+        }
+        // For any other error, throw a generic 500 error
+        throw new ApiError(500, 'An error occurred while processing your request');
+    }
 })
 
 const verifyToken = asyncHandler(async(req,res) => {
