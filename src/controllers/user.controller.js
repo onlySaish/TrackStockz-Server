@@ -32,14 +32,14 @@ const transporter = nodemailer.createTransport({
     pass: process.env.SMTP_PASS || process.env.APP_PASS,
   },
   // Production settings
-  ...(isProduction && {
-    tls: {
-      rejectUnauthorized: true
-    },
-    pool: true,
-    maxConnections: 5,
-    maxMessages: 100
-  }),
+//   ...(isProduction && {
+//     tls: {
+//       rejectUnauthorized: true
+//     },
+//     pool: true,
+//     maxConnections: 5,
+//     maxMessages: 100
+//   }),
   // Development settings
   ...(!isProduction && {
     tls: {
