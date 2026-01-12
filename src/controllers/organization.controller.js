@@ -164,10 +164,54 @@ const joinOrganization = asyncHandler(async (req, res) => {
   );
 });
 
+const removeMember = asyncHandler(async (req, res) => {
+  const { organizationId, memberId } = req.params;
+
+  // 1. Check if requester is Owner/Admin of the organization
+  const requesterMembership = await Membership.findOne({
+    user: req.user._id,
+    organization: organizationId,
+    status: "Active"
+  });
+
+  if (!requesterMembership || !["Owner", "Admin"].includes(requesterMembership.role)) {
+    throw new ApiError(403, "You do not have permission to remove members");
+  }
+
+  // 2. Find the membership to remove
+  const membershipToRemove = await Membership.findOne({
+    user: memberId,
+    organization: organizationId
+  });
+
+  if (!membershipToRemove) {
+    throw new ApiError(404, "Member not found in this organization");
+  }
+
+  // 3. Prevent removing self if Owner (Optional specific logic, but generally allowed if not the *only* owner, but simpler to just allow or block self-removal entirely depending on reqs. Standard: You can leave, but removing self via 'removeMember' usually implies kicking someone else. Let's allow removing others.)
+  if (requesterMembership.user.toString() === membershipToRemove.user.toString()) {
+    // If owner tries to remove themselves, they should use 'leave' endpoint (not implemented yet) or we allow it.
+    // For now, let's block it to prevent accidental lockout/deletion via this specific route intended for management.
+    throw new ApiError(400, "You cannot remove yourself using this feature.");
+  }
+
+  // 4. Check hierarchy: Admin cannot remove Owner.
+  if (requesterMembership.role === "Admin" && membershipToRemove.role === "Owner") {
+    throw new ApiError(403, "Admins cannot remove Owners");
+  }
+
+  await Membership.findByIdAndDelete(membershipToRemove._id);
+
+  res.status(200).json(
+    new ApiResponse(200, {}, "Member removed successfully")
+  );
+});
+
 export {
   createOrganization,
   getUserOrganizations,
   getOrganizationMembers,
   addMember,
-  joinOrganization
+  joinOrganization,
+  removeMember
 };

@@ -53,11 +53,29 @@ const getDashboardStats = asyncHandler(async (req, res) => {
     { $match: { organization: new mongoose.Types.ObjectId(organizationId) } },
     {
       $group: {
-        _id: { $month: "$createdAt" }, // Group by month
+        _id: {
+          year: { $year: "$createdAt" },
+          month: { $month: "$createdAt" }
+        },
         totalRevenue: { $sum: "$finalDiscountedPrice" }
       }
     },
-    { $sort: { _id: 1 } } // Sort by month
+    { $sort: { "_id.year": 1, "_id.month": 1 } }
+  ])
+
+  // Fetch monthly customer acquisition trends
+  const customerTrends = await Customer.aggregate([
+    { $match: { organization: new mongoose.Types.ObjectId(organizationId) } },
+    {
+      $group: {
+        _id: {
+          year: { $year: "$createdAt" },
+          month: { $month: "$createdAt" }
+        },
+        count: { $sum: 1 }
+      }
+    },
+    { $sort: { "_id.year": 1, "_id.month": 1 } }
   ])
 
   // Convert month numbers to readable month names
@@ -66,8 +84,13 @@ const getDashboardStats = asyncHandler(async (req, res) => {
     7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
   }
   const formattedSalesTrends = salesTrends.map(item => ({
-    month: monthsMap[item._id],
+    month: monthsMap[item._id.month],
     revenue: item.totalRevenue
+  }))
+
+  const formattedCustomerTrends = customerTrends.map(item => ({
+    month: monthsMap[item._id.month],
+    count: item.count
   }))
 
   res.status(200).json(
@@ -83,7 +106,9 @@ const getDashboardStats = asyncHandler(async (req, res) => {
           completedOrders,
           cancelledOrders,
           lowStockCount,
-          salesTrends: formattedSalesTrends
+          lowStockCount,
+          salesTrends: formattedSalesTrends,
+          customerTrends: formattedCustomerTrends
         },
         recentOrders: recentOrders.map(order => ({
           id: order._id,

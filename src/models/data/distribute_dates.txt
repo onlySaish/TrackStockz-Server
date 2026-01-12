@@ -1,0 +1,47 @@
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const DATA_DIR = __dirname;
+const FILES = ['Inventory.customers.json', 'Inventory.orders.json', 'Inventory.products.json'];
+
+const getRandomDate = (start, end) => {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+};
+
+const distributeDates = async () => {
+  const now = new Date();
+  const fourMonthsAgo = new Date();
+  fourMonthsAgo.setMonth(now.getMonth() - 4);
+
+  for (const file of FILES) {
+    const filePath = path.join(DATA_DIR, file);
+    try {
+      console.log(`Processing ${file}...`);
+      const data = await fs.readFile(filePath, 'utf-8');
+      const json = JSON.parse(data);
+
+      const updatedJson = json.map(item => {
+        const randomDate = getRandomDate(fourMonthsAgo, now);
+        const dateString = randomDate.toISOString();
+
+        // Use Mongo Extended JSON format for dates
+        item.createdAt = { "$date": dateString };
+        item.updatedAt = { "$date": dateString };
+
+        return item;
+      });
+
+      await fs.writeFile(filePath, JSON.stringify(updatedJson, null, 2));
+      console.log(`Updated ${file} with distributed dates.`);
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error);
+    }
+  }
+  console.log('All files processed.');
+};
+
+distributeDates();
