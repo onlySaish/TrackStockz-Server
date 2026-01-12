@@ -1,0 +1,369 @@
+[
+  {
+    "_id": {
+      "$oid": "67e6b824a02cd20274acd69b"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "name": "Mouse",
+    "description": "Mouse Description",
+    "price": [
+      {
+        "date": {
+          "$date": "2025-03-31T14:29:22.761Z"
+        },
+        "price": 800,
+        "_id": {
+          "$oid": "67eaa6c257a50daf125e47c7"
+        }
+      },
+      {
+        "date": {
+          "$date": "2025-03-31T14:29:11.604Z"
+        },
+        "price": 1200,
+        "_id": {
+          "$oid": "67eaa6b757a50daf125e47ac"
+        }
+      },
+      {
+        "price": 1000,
+        "_id": {
+          "$oid": "67e6b824a02cd20274acd69c"
+        },
+        "date": {
+          "$date": "2025-03-28T14:54:28.733Z"
+        }
+      }
+    ],
+    "quantity": 464,
+    "category": "Electronics",
+    "supplier": "Logitech Supplier Pvt Ltd",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 50,
+    "discountPercent": 10,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1743173366/ya5p7r9u4of7l0vfykl4.jpg",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1743173367/kif6fahqtxkjirgiwz9u.jpg",
+      "https://res.cloudinary.com/sainok/image/upload/v1743173367/b2bv8c7gbyz2ocgusnjk.jpg",
+      "https://res.cloudinary.com/sainok/image/upload/v1743173368/ljcw0janj7g5iyijlmqn.jpg"
+    ],
+    "sku": "1743173668735",
+    "createdAt": {
+      "$date": "2025-03-28T14:54:28.743Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-23T19:34:10.261Z"
+    },
+    "__v": 2,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa69d57a50daf125e4794"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "name": "Doll2",
+    "description": "Doll Description...",
+    "price": [
+      {
+        "date": {
+          "$date": "2025-06-09T15:31:30.165Z"
+        },
+        "price": 497,
+        "_id": {
+          "$oid": "6846fe52352209b5be14756d"
+        }
+      },
+      {
+        "price": 200,
+        "_id": {
+          "$oid": "67eaa69d57a50daf125e4795"
+        },
+        "date": {
+          "$date": "2025-03-31T14:28:45.473Z"
+        }
+      }
+    ],
+    "quantity": 365,
+    "category": "Toys",
+    "supplier": "Toys Player",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 40,
+    "discountPercent": 2,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1749483194/czbliomdogu8qbvqbxnc.jpg",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1749483262/jfypfxi3q1ewoyuihcpa.jpg"
+    ],
+    "sku": "1743431325474",
+    "createdAt": {
+      "$date": "2025-03-31T14:28:45.476Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-12T06:22:25.303Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaaccf57a50daf125e4cd2"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "name": "Headset",
+    "description": "Wireless Headset",
+    "price": [
+      {
+        "date": {
+          "$date": "2025-03-31T14:57:33.103Z"
+        },
+        "price": 1800,
+        "_id": {
+          "$oid": "67eaad5d57a50daf125e4d32"
+        }
+      },
+      {
+        "price": 1500,
+        "_id": {
+          "$oid": "67eaaccf57a50daf125e4cd3"
+        },
+        "date": {
+          "$date": "2025-03-31T14:55:11.191Z"
+        }
+      }
+    ],
+    "quantity": 280,
+    "category": "Wearables",
+    "supplier": "Boat",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 20,
+    "discountPercent": 3,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1743432606/k7bbwkffyselxsxkbt5h.jpg",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1743432607/izj0ypqsloo6vyasxdqx.webp"
+    ],
+    "sku": "1743432911191",
+    "createdAt": {
+      "$date": "2025-03-31T14:55:11.192Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:27.102Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6845b884f106751da4513d96"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "name": "test5",
+    "description": "test des",
+    "price": [
+      {
+        "price": 894,
+        "_id": {
+          "$oid": "6845b884f106751da4513d97"
+        },
+        "date": {
+          "$date": "2025-06-08T16:21:24.281Z"
+        }
+      }
+    ],
+    "quantity": 589,
+    "category": "Gaming",
+    "supplier": "485",
+    "isDeleted": true,
+    "status": "Active",
+    "lowStockThreshold": 45,
+    "discountPercent": 5,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1749399618/y9pnhcou9m8bdbqj0exy.png",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1749399619/u1a4g3kel8klwufjqob5.webp",
+      "https://res.cloudinary.com/sainok/image/upload/v1749399620/twq1g3ljwokqefrijjix.jpg"
+    ],
+    "sku": "1749399684283",
+    "createdAt": {
+      "$date": "2025-06-08T16:21:24.285Z"
+    },
+    "updatedAt": {
+      "$date": "2025-06-08T16:21:30.103Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaad3b57a50daf125e4cf4"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "name": "Speaker",
+    "description": "Best Speaker",
+    "price": [
+      {
+        "price": 1200,
+        "_id": {
+          "$oid": "67eaad3b57a50daf125e4cf5"
+        },
+        "date": {
+          "$date": "2025-03-31T14:56:59.829Z"
+        }
+      }
+    ],
+    "quantity": 685,
+    "category": "Home",
+    "supplier": "Speaker King",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 50,
+    "discountPercent": 5,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1743432714/xoexzrrkbyp7dnkiffej.webp",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1743432716/yzzi73mvu4yehdd3ffdq.jpg"
+    ],
+    "sku": "1743433019829",
+    "createdAt": {
+      "$date": "2025-03-31T14:56:59.830Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:27.118Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa61757a50daf125e475a"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "name": "Mixer",
+    "description": "Mixer Description",
+    "price": [
+      {
+        "date": {
+          "$date": "2025-03-31T14:29:40.929Z"
+        },
+        "price": 600,
+        "_id": {
+          "$oid": "67eaa6d457a50daf125e47e3"
+        }
+      },
+      {
+        "price": 500,
+        "_id": {
+          "$oid": "67eaa61757a50daf125e475b"
+        },
+        "date": {
+          "$date": "2025-03-31T14:26:31.310Z"
+        }
+      }
+    ],
+    "quantity": 457,
+    "category": "Kitchen",
+    "supplier": "Kitchen Player",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 50,
+    "discountPercent": 5,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1743430887/qihi1of8xt9ywgllqmyb.jpg",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1743430888/jodrcwftoywifbvsku7q.jpg"
+    ],
+    "sku": "1743431191311",
+    "createdAt": {
+      "$date": "2025-03-31T14:26:31.315Z"
+    },
+    "updatedAt": {
+      "$date": "2025-06-12T10:35:26.615Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaac4f57a50daf125e4c7a"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "name": "Keyboard",
+    "description": "RGB Keyboard",
+    "price": [
+      {
+        "date": {
+          "$date": "2025-03-31T14:57:18.645Z"
+        },
+        "price": 2200,
+        "_id": {
+          "$oid": "67eaad4e57a50daf125e4d15"
+        }
+      },
+      {
+        "date": {
+          "$date": "2025-03-31T14:57:10.165Z"
+        },
+        "price": 1800,
+        "_id": {
+          "$oid": "67eaad4657a50daf125e4d0c"
+        }
+      },
+      {
+        "price": 2000,
+        "_id": {
+          "$oid": "67eaac4f57a50daf125e4c7b"
+        },
+        "date": {
+          "$date": "2025-03-31T14:53:03.353Z"
+        }
+      }
+    ],
+    "quantity": 482,
+    "category": "Gaming",
+    "supplier": "Logitech",
+    "isDeleted": false,
+    "status": "Active",
+    "lowStockThreshold": 30,
+    "discountPercent": 5,
+    "coverImg": "https://res.cloudinary.com/sainok/image/upload/v1743432477/wtkjbizmgsjurphzyqoj.jpg",
+    "photos": [
+      "https://res.cloudinary.com/sainok/image/upload/v1743432479/ngtsj1i1r1ezjuvgy5oh.jpg"
+    ],
+    "sku": "1743432783354",
+    "createdAt": {
+      "$date": "2025-03-31T14:53:03.356Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:27.075Z"
+    },
+    "__v": 2,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  }
+]

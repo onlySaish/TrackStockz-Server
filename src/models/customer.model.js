@@ -1,4 +1,4 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import mongooseAggregatePaginate from 'mongoose-aggregate-paginate-v2'
 import mongoosePaginate from 'mongoose-aggregate-paginate-v2'
 
@@ -7,6 +7,11 @@ const customerSchema = new Schema(
         owner: {
             type: Schema.Types.ObjectId,
             ref: "User"
+        },
+        organization: {
+            type: Schema.Types.ObjectId,
+            ref: "Organization",
+            required: true
         },
         firstName: {
             type: String,
@@ -50,8 +55,8 @@ const customerSchema = new Schema(
             default: false
         }
     }
-,{timestamps:true});
+    , { timestamps: true });
 
-customerSchema.plugin(mongooseAggregatePaginate,mongoosePaginate);
+customerSchema.plugin(mongooseAggregatePaginate, mongoosePaginate);
 
-export const Customer = mongoose.model("Customer",customerSchema);
+export const Customer = mongoose.model("Customer", customerSchema);

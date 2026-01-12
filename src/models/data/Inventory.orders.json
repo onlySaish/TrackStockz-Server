@@ -1,0 +1,1334 @@
+[
+  {
+    "_id": {
+      "$oid": "67eaa7fb57a50daf125e49c6"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79923abab9e7f7149e6c"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 3,
+        "price": 800,
+        "_id": {
+          "$oid": "67eaa7fb57a50daf125e49c7"
+        }
+      }
+    ],
+    "totalPrice": 2400,
+    "initialDiscountedPrice": 2160,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 2073.6,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-03-31T14:34:35.518Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T14:34:35.518Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa9c957a50daf125e4aef"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79743abab9e7f7149e62"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 5,
+        "price": 800,
+        "_id": {
+          "$oid": "67eaa9dd57a50daf125e4b27"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 4,
+        "price": 600,
+        "_id": {
+          "$oid": "67eaa9dd57a50daf125e4b28"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 1,
+        "price": 200,
+        "_id": {
+          "$oid": "67eaa9dd57a50daf125e4b29"
+        }
+      }
+    ],
+    "totalPrice": 6600,
+    "initialDiscountedPrice": 6076,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 5772.2,
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-03-31T14:42:17.304Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T14:42:37.233Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebfa473cfbefa90a6c4c18"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a6c3abab9e7f7149ec6"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 2,
+        "price": 1800,
+        "_id": {
+          "$oid": "67ebfa473cfbefa90a6c4c19"
+        }
+      }
+    ],
+    "totalPrice": 3600,
+    "initialDiscountedPrice": 3492,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 3387.24,
+    "paymentMethod": "Card",
+    "status": "Cancelled",
+    "createdAt": {
+      "$date": "2025-04-01T14:37:59.389Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:35.344Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68289db49a5148e319b3f583"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 200,
+        "_id": {
+          "$oid": "68289db49a5148e319b3f584"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 1,
+        "price": 600,
+        "_id": {
+          "$oid": "68289db49a5148e319b3f585"
+        }
+      }
+    ],
+    "totalPrice": 1000,
+    "initialDiscountedPrice": 962,
+    "additionalDiscountPercent": 2,
+    "finalDiscountedPrice": 942.76,
+    "paymentMethod": "Cash",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-05-17T14:31:16.609Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-17T14:31:16.609Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaae7157a50daf125e4dd5"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a7f3abab9e7f7149ed0"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 4,
+        "price": 1800,
+        "_id": {
+          "$oid": "67eaae8457a50daf125e4e07"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaad3b57a50daf125e4cf4"
+        },
+        "quantity": 3,
+        "price": 1200,
+        "_id": {
+          "$oid": "67eaae8457a50daf125e4e08"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 3,
+        "price": 2200,
+        "_id": {
+          "$oid": "67eaae8457a50daf125e4e09"
+        }
+      }
+    ],
+    "totalPrice": 17400,
+    "initialDiscountedPrice": 16674,
+    "additionalDiscountPercent": 6,
+    "finalDiscountedPrice": 15673.56,
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-03-31T15:02:09.399Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T15:02:28.357Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebfa323cfbefa90a6c4c0c"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a763abab9e7f7149ecb"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 2,
+        "price": 2200,
+        "_id": {
+          "$oid": "67ebfa323cfbefa90a6c4c0d"
+        }
+      }
+    ],
+    "totalPrice": 4400,
+    "initialDiscountedPrice": 4180,
+    "additionalDiscountPercent": 2,
+    "finalDiscountedPrice": 4096.4,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-04-01T14:37:38.972Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:32.393Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebfa9f3cfbefa90a6c4c47"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a4d3abab9e7f7149eb7"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 8,
+        "price": 2200,
+        "_id": {
+          "$oid": "67ebfa9f3cfbefa90a6c4c48"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 4,
+        "price": 1800,
+        "_id": {
+          "$oid": "67ebfa9f3cfbefa90a6c4c49"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaad3b57a50daf125e4cf4"
+        },
+        "quantity": 2,
+        "price": 1200,
+        "_id": {
+          "$oid": "67ebfa9f3cfbefa90a6c4c4a"
+        }
+      }
+    ],
+    "totalPrice": 27200,
+    "initialDiscountedPrice": 25984,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 25204.48,
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-04-01T14:39:27.129Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:27.129Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68289e379a5148e319b3f6ce"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea795f3abab9e7f7149e58"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 3,
+        "price": 600,
+        "_id": {
+          "$oid": "68289e379a5148e319b3f6cf"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 3,
+        "price": 800,
+        "_id": {
+          "$oid": "68289e379a5148e319b3f6d0"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 200,
+        "_id": {
+          "$oid": "68289e379a5148e319b3f6d1"
+        }
+      }
+    ],
+    "totalPrice": 4600,
+    "initialDiscountedPrice": 4262,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 4134.14,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-05-17T14:33:27.789Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-17T14:35:47.635Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa78457a50daf125e4908"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea799c3abab9e7f7149e71"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 2,
+        "price": 600,
+        "_id": {
+          "$oid": "67eaa78457a50daf125e4909"
+        }
+      }
+    ],
+    "totalPrice": 1200,
+    "initialDiscountedPrice": 1140,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 1083,
+    "paymentMethod": "Card",
+    "status": "Cancelled",
+    "createdAt": {
+      "$date": "2025-03-31T14:32:36.182Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T14:43:30.831Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebf7bc3cfbefa90a6c4968"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea795f3abab9e7f7149e58"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 2,
+        "price": 600,
+        "_id": {
+          "$oid": "67ebf7bc3cfbefa90a6c4969"
+        }
+      }
+    ],
+    "totalPrice": 1200,
+    "initialDiscountedPrice": 1140,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 1105.8,
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-04-01T14:27:08.657Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:27:08.657Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68289de09a5148e319b3f5f5"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79923abab9e7f7149e6c"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 3,
+        "price": 800,
+        "_id": {
+          "$oid": "68289de09a5148e319b3f5f6"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 4,
+        "price": 200,
+        "_id": {
+          "$oid": "68289de09a5148e319b3f5f7"
+        }
+      }
+    ],
+    "totalPrice": 3200,
+    "initialDiscountedPrice": 2944,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 2826.24,
+    "paymentMethod": "Card",
+    "status": "Cancelled",
+    "createdAt": {
+      "$date": "2025-05-17T14:32:00.703Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-17T14:35:49.250Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6848392fc6f734ce7259e8c5"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 3,
+        "price": 497,
+        "_id": {
+          "$oid": "6848392fc6f734ce7259e8c6"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 1,
+        "price": 600,
+        "_id": {
+          "$oid": "6848392fc6f734ce7259e8c7"
+        }
+      }
+    ],
+    "totalPrice": 2091,
+    "initialDiscountedPrice": 2031.18,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 1929.621,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-06-10T13:54:55.086Z"
+    },
+    "updatedAt": {
+      "$date": "2025-06-11T16:15:39.554Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa98c57a50daf125e4ab5"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79823abab9e7f7149e67"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 200,
+        "_id": {
+          "$oid": "67eaa98c57a50daf125e4ab6"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 3,
+        "price": 600,
+        "_id": {
+          "$oid": "67eaa98c57a50daf125e4ab7"
+        }
+      }
+    ],
+    "totalPrice": 2200,
+    "initialDiscountedPrice": 2102,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 2017.92,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-03-31T14:41:16.470Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:31:08.196Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaae0457a50daf125e4d8d"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a9a3abab9e7f7149edf"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 1,
+        "price": 1800,
+        "_id": {
+          "$oid": "67eaae0457a50daf125e4d8e"
+        }
+      }
+    ],
+    "totalPrice": 1800,
+    "initialDiscountedPrice": 1746,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 1693.62,
+    "paymentMethod": "Card",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-03-31T15:00:20.726Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T15:02:46.786Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebf26d94d0e259fb910195"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79693abab9e7f7149e5d"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 2,
+        "price": 800,
+        "_id": {
+          "$oid": "67ebf26d94d0e259fb910196"
+        }
+      }
+    ],
+    "totalPrice": 1600,
+    "initialDiscountedPrice": 1440,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 1396.8,
+    "paymentMethod": "Cash",
+    "status": "Cancelled",
+    "createdAt": {
+      "$date": "2025-04-01T14:04:29.229Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:31:22.627Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68289e849a5148e319b3f733"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79263abab9e7f7149e2f"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 200,
+        "_id": {
+          "$oid": "68289e849a5148e319b3f734"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 4,
+        "price": 600,
+        "_id": {
+          "$oid": "68289e849a5148e319b3f735"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 1,
+        "price": 800,
+        "_id": {
+          "$oid": "68289e849a5148e319b3f736"
+        }
+      }
+    ],
+    "totalPrice": 3600,
+    "initialDiscountedPrice": 3392,
+    "additionalDiscountPercent": 0,
+    "finalDiscountedPrice": 3392,
+    "paymentMethod": "Card",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-05-17T14:34:44.829Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-23T19:32:11.718Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68499cb96c2a49187c17d269"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 3,
+        "price": 600,
+        "_id": {
+          "$oid": "684aad6e922819c73aedf38c"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 497,
+        "_id": {
+          "$oid": "684aad6e922819c73aedf38d"
+        }
+      }
+    ],
+    "totalPrice": 2794,
+    "initialDiscountedPrice": 2684.12,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 2576.7552,
+    "paymentMethod": "Cash",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-06-11T15:11:53.397Z"
+    },
+    "updatedAt": {
+      "$date": "2025-06-12T10:35:26.669Z"
+    },
+    "__v": 2,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaade157a50daf125e4d84"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7aa53abab9e7f7149ee4"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 2,
+        "price": 2200,
+        "_id": {
+          "$oid": "67eaade157a50daf125e4d85"
+        }
+      }
+    ],
+    "totalPrice": 4400,
+    "initialDiscountedPrice": 4180,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 3971,
+    "paymentMethod": "Cash",
+    "status": "Cancelled",
+    "createdAt": {
+      "$date": "2025-03-31T14:59:45.662Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T15:02:49.904Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebf7d33cfbefa90a6c4970"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79513abab9e7f7149e53"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 2,
+        "price": 200,
+        "_id": {
+          "$oid": "67ebf7d33cfbefa90a6c4971"
+        }
+      }
+    ],
+    "totalPrice": 400,
+    "initialDiscountedPrice": 392,
+    "additionalDiscountPercent": 1,
+    "finalDiscountedPrice": 388.08,
+    "paymentMethod": "UPI",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-04-01T14:27:31.477Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:30:40.685Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebf82f3cfbefa90a6c4997"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea78c03abab9e7f7149e20"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 1,
+        "price": 200,
+        "_id": {
+          "$oid": "67ebf82f3cfbefa90a6c4998"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 4,
+        "price": 600,
+        "_id": {
+          "$oid": "67ebf82f3cfbefa90a6c4999"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 3,
+        "price": 800,
+        "_id": {
+          "$oid": "67ebf82f3cfbefa90a6c499a"
+        }
+      }
+    ],
+    "totalPrice": 5000,
+    "initialDiscountedPrice": 4636,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 4450.56,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-04-01T14:29:03.751Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:29:03.751Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebfa763cfbefa90a6c4c31"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a583abab9e7f7149ebc"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaad3b57a50daf125e4cf4"
+        },
+        "quantity": 1,
+        "price": 1200,
+        "_id": {
+          "$oid": "67ebfa763cfbefa90a6c4c32"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 2,
+        "price": 1800,
+        "_id": {
+          "$oid": "67ebfa763cfbefa90a6c4c33"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 1,
+        "price": 2200,
+        "_id": {
+          "$oid": "67ebfa763cfbefa90a6c4c34"
+        }
+      }
+    ],
+    "totalPrice": 7000,
+    "initialDiscountedPrice": 6722,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 6385.9,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-04-01T14:38:46.345Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:39:37.208Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6830cd98785fbed281faa365"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 3,
+        "price": 800,
+        "_id": {
+          "$oid": "6830cdb2785fbed281faa399"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 4,
+        "price": 200,
+        "_id": {
+          "$oid": "6830cdb2785fbed281faa39a"
+        }
+      }
+    ],
+    "totalPrice": 3200,
+    "initialDiscountedPrice": 2944,
+    "additionalDiscountPercent": 3,
+    "finalDiscountedPrice": 2855.68,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-05-23T19:33:44.693Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-23T19:34:10.307Z"
+    },
+    "__v": 1,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaae4c57a50daf125e4dc8"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a8a3abab9e7f7149ed5"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaac4f57a50daf125e4c7a"
+        },
+        "quantity": 2,
+        "price": 2200,
+        "_id": {
+          "$oid": "67eaae4c57a50daf125e4dc9"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaaccf57a50daf125e4cd2"
+        },
+        "quantity": 3,
+        "price": 1800,
+        "_id": {
+          "$oid": "67eaae4c57a50daf125e4dca"
+        }
+      }
+    ],
+    "totalPrice": 9800,
+    "initialDiscountedPrice": 9418,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 9041.28,
+    "paymentMethod": "Cash",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-03-31T15:01:32.332Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T15:01:32.332Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebfa573cfbefa90a6c4c20"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a623abab9e7f7149ec1"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaad3b57a50daf125e4cf4"
+        },
+        "quantity": 2,
+        "price": 1200,
+        "_id": {
+          "$oid": "67ebfa573cfbefa90a6c4c21"
+        }
+      }
+    ],
+    "totalPrice": 2400,
+    "initialDiscountedPrice": 2280,
+    "additionalDiscountPercent": 4,
+    "finalDiscountedPrice": 2188.8,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-04-01T14:38:15.550Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:38:15.550Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaa72557a50daf125e4882"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 1,
+        "price": 200,
+        "_id": {
+          "$oid": "67eaa72557a50daf125e4883"
+        }
+      }
+    ],
+    "totalPrice": 200,
+    "initialDiscountedPrice": 196,
+    "additionalDiscountPercent": 2,
+    "finalDiscountedPrice": 192.08,
+    "paymentMethod": "Cash",
+    "status": "Completed",
+    "createdAt": {
+      "$date": "2025-03-31T14:31:01.432Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T14:43:20.427Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67eaae2257a50daf125e4d95"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "customer": {
+      "$oid": "67ea7a923abab9e7f7149eda"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaad3b57a50daf125e4cf4"
+        },
+        "quantity": 4,
+        "price": 1200,
+        "_id": {
+          "$oid": "67eaae2257a50daf125e4d96"
+        }
+      }
+    ],
+    "totalPrice": 4800,
+    "initialDiscountedPrice": 4560,
+    "additionalDiscountPercent": 10,
+    "finalDiscountedPrice": 4104,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-03-31T15:00:50.775Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T15:00:50.775Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ebf7fe3cfbefa90a6c4981"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79263abab9e7f7149e2f"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa69d57a50daf125e4794"
+        },
+        "quantity": 1,
+        "price": 200,
+        "_id": {
+          "$oid": "67ebf7fe3cfbefa90a6c4982"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 1,
+        "price": 600,
+        "_id": {
+          "$oid": "67ebf7fe3cfbefa90a6c4983"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 1,
+        "price": 800,
+        "_id": {
+          "$oid": "67ebf7fe3cfbefa90a6c4984"
+        }
+      }
+    ],
+    "totalPrice": 1600,
+    "initialDiscountedPrice": 1486,
+    "additionalDiscountPercent": 5,
+    "finalDiscountedPrice": 1411.7,
+    "paymentMethod": "Cash",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-04-01T14:28:14.108Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T14:28:14.108Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68289e079a5148e319b3f667"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "customer": {
+      "$oid": "67ea79743abab9e7f7149e62"
+    },
+    "products": [
+      {
+        "product": {
+          "$oid": "67eaa61757a50daf125e475a"
+        },
+        "quantity": 4,
+        "price": 600,
+        "_id": {
+          "$oid": "68289e079a5148e319b3f668"
+        }
+      },
+      {
+        "product": {
+          "$oid": "67e6b824a02cd20274acd69b"
+        },
+        "quantity": 2,
+        "price": 800,
+        "_id": {
+          "$oid": "68289e079a5148e319b3f669"
+        }
+      }
+    ],
+    "totalPrice": 4000,
+    "initialDiscountedPrice": 3720,
+    "additionalDiscountPercent": 0,
+    "finalDiscountedPrice": 3720,
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "createdAt": {
+      "$date": "2025-05-17T14:32:39.435Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-17T14:32:39.435Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  }
+]

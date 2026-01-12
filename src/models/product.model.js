@@ -1,4 +1,4 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import mongooseAggregatePaginate from 'mongoose-aggregate-paginate-v2'
 import mongoosePaginate from 'mongoose-aggregate-paginate-v2'
 
@@ -7,6 +7,11 @@ const productSchema = new Schema(
         owner: {
             type: Schema.Types.ObjectId,
             ref: "User"
+        },
+        organization: {
+            type: Schema.Types.ObjectId,
+            ref: "Organization",
+            required: true
         },
         name: {
             type: String,
@@ -19,18 +24,18 @@ const productSchema = new Schema(
             trim: true
         },
         price: [
-        {
-            date: {
-                type: Date,
-                required: true,
-                default: Date.now
-            },
-            price: {
-                type: Number,
-                required: true,
-                min: 0
+            {
+                date: {
+                    type: Date,
+                    required: true,
+                    default: Date.now
+                },
+                price: {
+                    type: Number,
+                    required: true,
+                    min: 0
+                }
             }
-        }
         ],
         quantity: {
             type: Number,
@@ -76,10 +81,10 @@ const productSchema = new Schema(
         photos: [
             { type: String }
         ],
-    }, {timestamps: true}
+    }, { timestamps: true }
 )
 
 
-productSchema.plugin(mongooseAggregatePaginate,mongoosePaginate);
+productSchema.plugin(mongooseAggregatePaginate, mongoosePaginate);
 
-export const Product = mongoose.model("Product",productSchema);
+export const Product = mongoose.model("Product", productSchema);

@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6964d7ff58194e03c83c20ac"
+  },
+  "user": {
+    "$oid": "67b3516ed7a343c94759f6ab"
+  },
+  "organization": {
+    "$oid": "6964d7ff58194e03c83c20aa"
+  },
+  "role": "Owner",
+  "status": "Active",
+  "createdAt": {
+    "$date": "2026-01-12T11:16:15.663Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-12T11:16:15.663Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6964d92ceaac0e6a3aaf409d"
+  },
+  "user": {
+    "$oid": "68308f4a110fe62ea47321ea"
+  },
+  "organization": {
+    "$oid": "6964d7ff58194e03c83c20aa"
+  },
+  "role": "Member",
+  "status": "Active",
+  "createdAt": {
+    "$date": "2026-01-12T11:21:16.960Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-12T11:21:16.960Z"
+  },
+  "__v": 0
+}]

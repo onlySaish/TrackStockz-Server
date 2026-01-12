@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6964d7ff58194e03c83c20aa"
+  },
+  "name": "First",
+  "slug": "12345",
+  "owner": {
+    "$oid": "67b3516ed7a343c94759f6ab"
+  },
+  "inviteCode": "ZLIXJ0",
+  "createdAt": {
+    "$date": "2026-01-12T11:16:15.644Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-12T11:16:15.644Z"
+  },
+  "__v": 0
+}]

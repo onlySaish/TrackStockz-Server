@@ -1,0 +1,653 @@
+[
+  {
+    "_id": {
+      "$oid": "67ea79513abab9e7f7149e53"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Rohan",
+    "lastName": "Verma",
+    "email": "rohan.verma@example.com",
+    "phoneNumber": "+91 7654321098",
+    "address": {
+      "street": "89 Lal Bahadur Shastri Marg",
+      "city": "Delhi",
+      "state": "Delhi",
+      "zipCode": "110001",
+      "country": "India"
+    },
+    "companyName": "Verma Solutions",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:15:29.901Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:15:29.901Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79823abab9e7f7149e67"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Rahul",
+    "lastName": "Das",
+    "email": "rahul.das@example.com",
+    "phoneNumber": "+91 3210987654",
+    "address": {
+      "street": "56 Park Street",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "zipCode": "700001",
+      "country": "India"
+    },
+    "companyName": "Das Technologies",
+    "blackListed": true,
+    "createdAt": {
+      "$date": "2025-03-31T11:16:18.020Z"
+    },
+    "updatedAt": {
+      "$date": "2025-05-23T19:30:46.297Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a583abab9e7f7149ebc"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Deepika",
+    "lastName": "Chowdhury",
+    "email": "deepika.chowdhury@example.com",
+    "phoneNumber": "+91 8765123456",
+    "address": {
+      "street": "18 Gariahat Road",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "zipCode": "700019",
+      "country": "India"
+    },
+    "companyName": "Chowdhury Textiles",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:19:52.742Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:19:52.742Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a7f3abab9e7f7149ed0"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Neha",
+    "lastName": "Saxena",
+    "email": "neha.saxena@example.com",
+    "phoneNumber": "+91 4321987654",
+    "address": {
+      "street": "4 Hazratganj",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "zipCode": "226001",
+      "country": "India"
+    },
+    "companyName": "Saxena Legal Services",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:31.988Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:31.988Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79263abab9e7f7149e2f"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Priya",
+    "lastName": "Iyer",
+    "email": "priya.iyer@example.com",
+    "phoneNumber": "+91 8765432109",
+    "address": {
+      "street": "45 Gandhi Street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "zipCode": "600001",
+      "country": "India"
+    },
+    "companyName": "Iyer Consulting",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:14:46.125Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:14:46.125Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea795f3abab9e7f7149e58"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Anjali",
+    "lastName": "Patel",
+    "email": "anjali.patel@example.com",
+    "phoneNumber": "+91 6543210987",
+    "address": {
+      "street": "77 Nehru Road",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipCode": "380001",
+      "country": "India"
+    },
+    "companyName": "Patel Designs",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:15:43.076Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:15:43.076Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79743abab9e7f7149e62"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Sneha",
+    "lastName": "Nair",
+    "email": "sneha.nair@example.com",
+    "phoneNumber": "+91 4321098765",
+    "address": {
+      "street": "21 Marine Drive",
+      "city": "Kochi",
+      "state": "Kerala",
+      "zipCode": "682001",
+      "country": "India"
+    },
+    "companyName": "Nair Industries",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:16:04.617Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:16:04.617Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a4d3abab9e7f7149eb7"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Arjun",
+    "lastName": "Mehta",
+    "email": "arjun.mehta@example.com",
+    "phoneNumber": "+91 9876123456",
+    "address": {
+      "street": "101 Cuffe Parade",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipCode": "400005",
+      "country": "India"
+    },
+    "companyName": "Mehta FinTech",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:19:41.381Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:19:41.381Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a9a3abab9e7f7149edf"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Anupam",
+    "lastName": "Mishra",
+    "email": "anupam.mishra@example.com",
+    "phoneNumber": "+91 1987654321",
+    "address": {
+      "street": "90 Civil Lines",
+      "city": "Allahabad",
+      "state": "Uttar Pradesh",
+      "zipCode": "211001",
+      "country": "India"
+    },
+    "companyName": "Mishra Publications",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:58.172Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:58.172Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6842c809f135c6984227452f"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "test3",
+    "lastName": "testlast2",
+    "email": "test2@gmail.com",
+    "phoneNumber": "9898674643",
+    "address": {
+      "street": "786",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipCode": "400 601",
+      "country": "India"
+    },
+    "companyName": "Super",
+    "blackListed": true,
+    "createdAt": {
+      "$date": "2025-06-06T10:50:49.945Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-07T05:07:07.350Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a8a3abab9e7f7149ed5"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Ravi",
+    "lastName": "Pillai",
+    "email": "ravi.pillai@example.com",
+    "phoneNumber": "+91 3217654987",
+    "address": {
+      "street": "31 MG Road",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "zipCode": "560001",
+      "country": "India"
+    },
+    "companyName": "Pillai Software Solutions",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:42.070Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:42.070Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea799c3abab9e7f7149e71"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Sandeep",
+    "lastName": "Yadav",
+    "email": "sandeep.yadav@example.com",
+    "phoneNumber": "+91 1098765432",
+    "address": {
+      "street": "12 Gomti Nagar",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "zipCode": "226010",
+      "country": "India"
+    },
+    "companyName": "Yadav Logistics",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:16:44.641Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:16:44.641Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79a93abab9e7f7149e76"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Meera",
+    "lastName": "Joshi",
+    "email": "meera.joshi@example.com",
+    "phoneNumber": "+91 9988776655",
+    "address": {
+      "street": "78 FC Road",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipCode": "411001",
+      "country": "India"
+    },
+    "companyName": "Joshi & Co.",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:16:57.199Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-07T05:06:57.355Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a623abab9e7f7149ec1"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Manoj",
+    "lastName": "Kulkarni",
+    "email": "manoj.kulkarni@example.com",
+    "phoneNumber": "+91 7654321678",
+    "address": {
+      "street": "54 Laxmi Road",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipCode": "411030",
+      "country": "India"
+    },
+    "companyName": "Kulkarni Automotives",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:02.146Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:02.146Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a6c3abab9e7f7149ec6"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Swati",
+    "lastName": "Bansal",
+    "email": "swati.bansal@example.com",
+    "phoneNumber": "+91 6543789123",
+    "address": {
+      "street": "22 Connaught Place",
+      "city": "Delhi",
+      "state": "Delhi",
+      "zipCode": "110001",
+      "country": "India"
+    },
+    "companyName": "Bansal Traders",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:12.041Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:12.041Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a923abab9e7f7149eda"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Meenal",
+    "lastName": "Deshmukh",
+    "email": "meenal.deshmukh@example.com",
+    "phoneNumber": "+91 2109543786",
+    "address": {
+      "street": "12 Shaniwar Peth",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipCode": "411002",
+      "country": "India"
+    },
+    "companyName": "Deshmukh Architects",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:50.252Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:50.252Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7aa53abab9e7f7149ee4"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Tanisha",
+    "lastName": "Kapoor",
+    "email": "tanisha.kapoor@example.com",
+    "phoneNumber": "+91 9988223344",
+    "address": {
+      "street": "32 Jalandhar Bypass",
+      "city": "Ludhiana",
+      "state": "Punjab",
+      "zipCode": "141008",
+      "country": "India"
+    },
+    "companyName": "Kapoor Fashion House",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:21:09.257Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:21:09.257Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea78c03abab9e7f7149e20"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Amit",
+    "lastName": "Sharma",
+    "email": "amit.sharma@example.com",
+    "phoneNumber": "9876543210",
+    "address": {
+      "street": "123 MG Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipCode": "400001",
+      "country": "India"
+    },
+    "companyName": "Sharma Enterprises",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:13:04.459Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:13:04.459Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79693abab9e7f7149e5d"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Vikram",
+    "lastName": "Singh",
+    "email": "vikram.singh@example.com",
+    "phoneNumber": "+91 5432109876",
+    "address": {
+      "street": "32 Rajpath Road",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "zipCode": "302001",
+      "country": "India"
+    },
+    "companyName": "Singh Builders",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:15:53.145Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:15:53.145Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea79923abab9e7f7149e6c"
+    },
+    "owner": {
+      "$oid": "67b3516ed7a343c94759f6ab"
+    },
+    "firstName": "Kavita",
+    "lastName": "Reddy",
+    "email": "kavita.reddy@example.com",
+    "phoneNumber": "+91 2109876543",
+    "address": {
+      "street": "90 MG Road",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipCode": "500001",
+      "country": "India"
+    },
+    "companyName": "Reddy Pharmaceuticals",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:16:34.291Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:16:34.291Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "67ea7a763abab9e7f7149ecb"
+    },
+    "owner": {
+      "$oid": "67b35b01a060eb7e2e6d17db"
+    },
+    "firstName": "Harsh",
+    "lastName": "Choudhary",
+    "email": "harsh.choudhary@example.com",
+    "phoneNumber": "+91 5432896543",
+    "address": {
+      "street": "67 Amer Road",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "zipCode": "302002",
+      "country": "India"
+    },
+    "companyName": "Choudhary Constructions",
+    "blackListed": false,
+    "createdAt": {
+      "$date": "2025-03-31T11:20:22.411Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-31T11:20:22.411Z"
+    },
+    "__v": 0,
+    "organization": {
+      "$oid": "6964d7ff58194e03c83c20aa"
+    }
+  }
+]
