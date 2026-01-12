@@ -8,3 +8,12 @@ export const oauth2client = new google.auth.OAuth2(
   GOOGLE_CLIENT_SECRET,
   'postmessage'
 );
+
+export const gmailOAuthClient = new google.auth.OAuth2(
+  GOOGLE_CLIENT_ID,
+  GOOGLE_CLIENT_SECRET
+);
+
+gmailOAuthClient.setCredentials({
+  refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
+});

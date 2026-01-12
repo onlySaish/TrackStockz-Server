@@ -1,0 +1,44 @@
+import { google } from "googleapis";
+import readline from "readline";
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+// ESM-safe __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load env correctly
+dotenv.config({ path: path.join(__dirname, "../.env") });
+
+// DEBUG (keep this for now)
+console.log("CWD:", process.cwd());
+console.log("CLIENT ID:", process.env.GOOGLE_CLIENT_ID);
+
+const oAuth2Client = new google.auth.OAuth2(
+  process.env.GOOGLE_CLIENT_ID,
+  process.env.GOOGLE_CLIENT_SECRET,
+  "http://localhost"
+);
+
+const SCOPES = ["https://www.googleapis.com/auth/gmail.send"];
+
+const authUrl = oAuth2Client.generateAuthUrl({
+  access_type: "offline",
+  prompt: "consent",
+  scope: SCOPES,
+});
+
+console.log("\nAuthorize this app by visiting this URL:\n");
+console.log(authUrl);
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("\nPaste the code here: ", async (code) => {
+  const { tokens } = await oAuth2Client.getToken(code);
+  console.log("\n✅ GOOGLE_REFRESH_TOKEN:\n", tokens.refresh_token);
+  rl.close();
+});

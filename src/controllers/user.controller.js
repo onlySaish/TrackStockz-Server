@@ -4,7 +4,7 @@ import {asyncHandler} from "../utils/asyncHandler.js";
 import { deleteFromCloudinary, getPublicIdFromUrl, uploadOnCloudinary } from "../utils/cloudinary.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import jwt from "jsonwebtoken"
-import nodemailer from "nodemailer"
+import { sendMail } from "../utils/gmail.js";
 import axios from "axios";
 import { oauth2client } from "../utils/googleConfig.js";
 
@@ -19,43 +19,8 @@ const compareTwoObjects = (obj1,obj2) => {
 }
 
 // Environment configuration
-const isProduction = process.env.NODE_ENV === 'production';
+// const isProduction = process.env.NODE_ENV === 'production';
 const FRONTEND_URL = process.env.FRONTEND_URL;
-
-// SMTP Configuration
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER || process.env.EMAIL_USER,
-    pass: process.env.SMTP_PASS || process.env.APP_PASS,
-  },
-  // Production settings
-//   ...(isProduction && {
-//     tls: {
-//       rejectUnauthorized: true
-//     },
-//     pool: true,
-//     maxConnections: 5,
-//     maxMessages: 100
-//   }),
-  // Development settings
-  ...(!isProduction && {
-    tls: {
-      rejectUnauthorized: false
-    }
-  })
-});
-
-// Test the transporter configuration
-transporter.verify(function(error, success) {
-  if (error) {
-    console.error('SMTP Connection Error:', error);
-  } else {
-    console.log(`SMTP Server is ready to send emails in ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'} mode`);
-  }
-});
 
 const generateAccessAndRefreshToken = async (userId) => {
     try {
@@ -86,15 +51,11 @@ const sendOtp = asyncHandler(async (req, res) => {
           const token = jwt.sign({ email: email,password: password, otp: otp }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "5m" });
         //   res.cookie("otp_token", token, { httpOnly: true, maxAge: 300000 }); // 5 minutes
       
-          // Send OTP Email
-          const response = await transporter.sendMail({
-            from: process.env.EMAIL,
+          await sendMail({
             to: email,
             subject: "Your OTP Code",
-            text: `Your OTP is: ${otp}`,
+            html: `<p>Your OTP is <strong>${otp}</strong></p>`,
           });
-      
-          if (!response) {throw new ApiError(500,'Error sending email')};
     
           res.status(200)
           .cookie("otp_token", token, {
@@ -177,20 +138,6 @@ const userRegister = asyncHandler(async (req, res) => {
             const createdUser = await User.findById(user._id).select("-password -refreshToken");
         
             if (!createdUser) {throw new ApiError(500,"Something went wrong while registering user")};
-        
-            //   const newUser = new User({
-            //     email: decoded.email,
-            //     password: decoded.hashedPassword,
-            //     username,
-            //     fullName,
-            //     avatar,
-            //   });
-          
-            //   await newUser.save();
-            //   res.clearCookie("otp_token");
-            //   res.clearCookie("auth_token");
-          
-            //   res.json({ success: true, message: "User registered successfully" });
 
             const options = {
                 httpOnly: true,
@@ -210,41 +157,6 @@ const userRegister = asyncHandler(async (req, res) => {
             )
   });
 
-// const userRegister = asyncHandler(async(req,res) => {
-//     const {fullName, username, email, password} = req.body    
-    
-//     if (            
-//         [fullName,username,email,password].some((field) => field?.trim() === "")
-//     ) throw new ApiError(400,"All Fields are Required");
-
-//     const existingUser = await User.findOne({         
-//         $or: [{email},{username}]
-//     })
-
-//     if (existingUser) {throw new ApiError(409,"User with Email or Username already Exists")};
-        
-    // const avatarLocalPath = req.file?.path
-    // if (!avatarLocalPath) {throw new ApiError(404,"Avatar file is required")}
-    
-    // const avatar = await uploadOnCloudinary(avatarLocalPath);
-    // if (!avatar) {throw new ApiError(400,"Avatar file is required")};
-
-    // const user = await User.create({
-    //     fullName,
-    //     username: username.toLowerCase(),
-    //     email,
-    //     password,
-    //     avatar: avatar.url
-    // })
-
-    // const createdUser = await User.findById(user._id).select("-password -refreshToken");
-
-    // if (!createdUser) {throw new ApiError(500,"Something went wrong while registering user")};
-
-//     return res.status(200).json(
-//         new ApiResponse(201,createdUser,"Successfully Registered")
-//     )
-// })
 
 const userLogin = asyncHandler(async(req,res) => {
     const {email, username, password} = req.body
@@ -291,61 +203,6 @@ const userLogin = asyncHandler(async(req,res) => {
         )
     )
 })
-
-// const googleAuth = asyncHandler(async(req,res) => {
-//     const { credential } = req.body;
-//     if (!credential) {throw new ApiError(400,"Google Credential is Required")};
-
-//     const ticket = await client.verifyIdToken({
-//         idToken: credential,
-//         audience: process.env.GOOGLE_CLIENT_ID,
-//     });
-
-//     const { email, name, picture } = ticket.getPayload();
-//     let user = await User.findOne({
-//         $or : [{username: name}, {email}]
-//     });
-    
-//     // let newAvatar;
-//     // if (picture) {
-//     //     newAvatar = picture.replace(/=s\d+-c/, '=s400');
-//     //     console.log(newAvatar);
-//     // }
-//     if (!user) {
-//         user = await User.create({
-//             email: email,
-//             username: name.toLowerCase(),
-//             fullName: name,
-//             avatar: picture || `https://sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png`,
-//             // avatar: picture || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}`,
-//         })
-
-//         const createdUser = await User.findById(user._id);
-
-//         if (!createdUser) {throw new ApiError(500,"Something went wrong while registering user")};
-//     }
-
-//     const options = {
-//         httpOnly: true,
-//         secure: true,               // Only over HTTPS
-//         sameSite: 'None',           // MUST be 'None' for cross-origin cookies
-//         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-//     }
-
-//     const {accessToken, refreshToken} = await generateAccessAndRefreshToken(user._id);
-//     return res.status(200)
-//     .cookie("accessToken",accessToken,options)
-//     .cookie("refreshToken",refreshToken,options)
-//     .json(
-//         new ApiResponse(
-//             200,
-//             {
-//                 user, accessToken, refreshToken 
-//             },
-//             "Logged In Successfully"
-//         )
-//     )
-// })
 
 const googleAuth = asyncHandler(async (req, res) => {
     const { code } = req.query;
@@ -625,8 +482,7 @@ const forgotPassword = asyncHandler(async(req,res) => {
         const resetLink = `${FRONTEND_URL}/resetpassword/${token}`;
         
         try {
-            const response = await transporter.sendMail({
-                from: `"TrackStockz" <${process.env.EMAIL_USER}>`,
+            await sendMail({
                 to: email,
                 subject: 'Password Reset Request',
                 html: `
@@ -648,7 +504,7 @@ const forgotPassword = asyncHandler(async(req,res) => {
                 `,
             });
 
-            console.log('Password reset email sent:', response);
+            // console.log('Password reset email sent:', response);
 
             return res.status(200).json(
                 new ApiResponse(
