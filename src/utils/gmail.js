@@ -1,6 +1,13 @@
 import { google } from "googleapis";
 import { gmailOAuthClient } from "./googleConfig.js";
 
+console.log("GMAIL ENV CHECK", {
+  hasClientId: !!process.env.GOOGLE_CLIENT_ID,
+  hasSecret: !!process.env.GOOGLE_CLIENT_SECRET,
+  hasRefresh: !!process.env.GOOGLE_REFRESH_TOKEN,
+});
+
+
 export const sendMail = async ({ to, subject, html }) => {
   const gmail = google.gmail({
     version: "v1",
